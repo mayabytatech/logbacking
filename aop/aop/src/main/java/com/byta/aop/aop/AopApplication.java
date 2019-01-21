@@ -13,7 +13,10 @@ public class AopApplication {
 		
 		//System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
 		SpringApplication.run(AopApplication.class, args);
-		logger.info("^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
+		logger.debug("DEBUG^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
+		logger.info("INFO^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
+		//.............logger level checking........................................
+		
 	}
 
 }
