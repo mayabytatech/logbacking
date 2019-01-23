@@ -13,11 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.byta.aop.aop.aspects;
+package com.byta.aop.aop.test;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,22 +26,18 @@ import org.springframework.web.bind.annotation.RestController;
  * , 
  */
 @RestController
-public class AspectResource {
-	
-	//class logging with logback which listen to logback configuration file
-	
-private final Logger logger=LoggerFactory.getLogger(AspectResource.class);
+public class TestResource {
 
-	@GetMapping("/hello")
+	//class which is looging with aop
+	@GetMapping("/test")
 	public String getDetails(){
-		logger.debug("******************debug inline hello aspect*******************");
-		logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>info inline aspect..............");
-	return "******************hello aspect*******************"	;
+		
+	return "******************hello test*******************"	;
 	}
-	
-	@PostMapping("/hellosample")
+	@PostMapping("/test")
 	public String postDetails(@RequestBody String data){
-		//logger.debug("******************hello post*******************",data);
+		
 	return data	;
 	}
+	
 }

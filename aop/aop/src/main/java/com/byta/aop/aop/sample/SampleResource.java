@@ -13,38 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.byta.aop.aop.aspects;
+package com.byta.aop.aop.sample;
 
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+/*import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;*/
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.byta.aop.aop.aspects.AspectResource;
 
 /**
  * TODO Provide a detailed description here 
  * @author MayaSanjeev
  * , 
  */
-@RestController
-public class AspectResource {
-	
-	//class logging with logback which listen to logback configuration file
-	
-private final Logger logger=LoggerFactory.getLogger(AspectResource.class);
-
-	@GetMapping("/hello")
+@RestController 
+public class SampleResource {
+	//class logging with aop
+	@GetMapping("/sample")
 	public String getDetails(){
-		logger.debug("******************debug inline hello aspect*******************");
-		logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>info inline aspect..............");
-	return "******************hello aspect*******************"	;
+		
+	return "******************hello sample*******************"	;
 	}
-	
-	@PostMapping("/hellosample")
+	@PostMapping("/postsample")
 	public String postDetails(@RequestBody String data){
-		//logger.debug("******************hello post*******************",data);
+		
 	return data	;
 	}
 }
