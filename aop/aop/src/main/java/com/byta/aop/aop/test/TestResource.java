@@ -29,11 +29,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestResource {
 
 	//class which is looging with aop
+	
+	
 	@GetMapping("/test")
 	public String getDetails(){
 		
-	return "******************hello test*******************"	;
+	return "******************hello test*******************";
 	}
+	
+	
 	@PostMapping("/test")
 	public String postDetails(@RequestBody String data){
 		

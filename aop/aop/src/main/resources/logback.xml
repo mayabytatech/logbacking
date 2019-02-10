@@ -1,8 +1,26 @@
 <configuration scan="true">
 	<include resource="org/springframework/boot/logging/logback/base.xml" />
+     <property resource="logback.properties" />
+     
+	<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">
+		<smtpHost>smtp.gmail.com</smtpHost>
+		<smtpPort>587</smtpPort>
+		<STARTTLS>true</STARTTLS>
+		<username>maya.k.k@lxisoft.com</username>
+		<password>${PASSWORD}</password>
+		<asynchronousSending>false</asynchronousSending>
+		<to>maya.k.k@lxisoft.com</to>
+		<from>maya</from>
+		<subject>ERROR: %logger{20} - %m</subject>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date %-5level %logger - %message%n</pattern>
+		</layout>
+	</appender>
 
-   <logger name="com.byta.aop.aop.aspects" level="INFO">
-  
-   </logger>
+
+
+	<logger name="com.byta.aop.aop.aspects" level="ERROR">
+		<appender-ref ref="EMAIL" />
+	</logger>
 
 </configuration> 

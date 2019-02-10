@@ -1,7 +1,5 @@
 package com.byta.aop.aop;
 
-
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,11 +10,10 @@ public class AopApplication {
 		
 	
 		SpringApplication.run(AopApplication.class, args);
-	//	logger.debug("debug^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
-	//	logger.info("INFO^^^^^^^^^^^^^^^^^^^^^^^^^^^^ MAIN METHOD^^^^^^^^^^^^^^^^^^^^^^^^");
-		//.............logger level checking........................................
+	
 		
 	}
+
 
 }
 
